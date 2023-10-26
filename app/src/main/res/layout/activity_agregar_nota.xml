@@ -1,9 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AgregarNota.Agregar_Nota">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--UID DEL USUARIO-->
+        <TextView
+            android:id="@+id/Uid_Usuario"
+            android:hint="@string/Uid_Usuario"
+            android:textSize="18sp"
+            android:fontFamily="@font/worksans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--CORREO DEL USUARIO-->
+        <TextView
+            android:id="@+id/Correo_usuario"
+            android:hint="@string/Correo_usuario"
+            android:textSize="18sp"
+            android:fontFamily="@font/worksans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--FECHA Y HORA ACTUAL DEL DISPOSITIVO-->
+        <TextView
+            android:id="@+id/Fecha_hora_actual"
+            android:hint="@string/Fecha_hora_actual"
+            android:textSize="18sp"
+            android:fontFamily="@font/worksans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--TITULO-->
+        <EditText
+            android:id="@+id/Titulo"
+            android:hint="@string/Titulo"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--DESCRIPCION-->
+        <EditText
+            android:id="@+id/Descripcion"
+            android:hint="@string/Descripcion"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:minHeight="150dp"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!--BOTÓN PARA ABRIR CALENDARIO-->
+            <Button
+                android:id="@+id/Btn_Calendario"
+                android:text="@string/Btn_Calendario"
+                app:icon="@drawable/icono_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--VISUALIZAR FECHA ELEGIDA-->
+            <TextView
+                android:id="@+id/Fecha"
+                android:hint="@string/Fecha"
+                android:textSize="20sp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/worksans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--ESTADO DE LA NOTA-->
+        <TextView
+            android:id="@+id/Estado"
+            android:text="@string/Estado"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/worksans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
