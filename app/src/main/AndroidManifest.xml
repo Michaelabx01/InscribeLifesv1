@@ -13,6 +13,9 @@
         android:theme="@style/Theme.InscribeLifes"
         tools:targetApi="31">
         <activity
+            android:name=".ActulizarNota.Actualizar_Nota"
+            android:exported="false" />
+        <activity
             android:name=".Perfil.Perfil_Usuario"
             android:exported="false" />
         <activity
