@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "735161791384",
+    "project_id": "agenda-app-9a1d5",
+    "storage_bucket": "agenda-app-9a1d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735161791384:android:5b71fce39b3f98d5f871ed",
+        "android_client_info": {
+          "package_name": "com.valdiviezomazautp.inscribelifes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRJQ09CCGcSeNeUwkKYcLpD6YnAy29fkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

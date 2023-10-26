@@ -1,0 +1,224 @@
+<resources>
+    <string name="app_name">InscribeLifes</string>
+
+    <!--MAIN ACTIVITY-->
+    <string name="Btn_Login">Login</string>
+    <string name="Btn_Registro">Registro</string>
+
+    <!--ACTIVIDAD REGISTRO-->
+    <string name="CrearCuentaTXT">Crear una cuenta</string>
+    <string name="NombreEt">Nombres</string>
+    <string name="CorreoEt">Correo electrónico</string>
+    <string name="ContaseñaEt">Contraseña</string>
+    <string name="ConfirmarContraseñaEt">Confirmar contraseña</string>
+    <string name="RegistrarUsuario">Registrar</string>
+    <string name="TengounacuentaTXT">Tengo una cuenta</string>
+
+
+    <!--ACTIVIDAD LOGIN-->
+    <string name="IniciarSesionTXT">Iniciar sesión</string>
+    <string name="CorreoLogin">Correo</string>
+    <string name="PassLogin">Contraseña</string>
+    <string name="Btn_Logeo">Ingresar</string>
+    <string name="UsuarioNuevoTXT">¿No tienes una cuenta?. Regístrate</string>
+
+    <!--MENÚ PRINCIPAL-->
+    <string name="BienvenidoPrincipal">Bienvenido(a)</string>
+    <string name="UidPrincipal"> -- </string>
+    <string name="NombresPrincipal"> -- </string>
+    <string name="CorreoPrincipal"> -- </string>
+    <string name="EstadoCuentaPrincipal">No verificado</string>
+
+    <string name="AgregarNotas">Agregar</string>
+    <string name="ListarNotas">Mis Notas</string>
+    <string name="Importantes">Importantes</string>
+    <string name="Contactos">Contactos</string>
+    <string name="AcercaDe">Acerca De</string>
+    <string name="CerrarSesion">Salir</string>
+
+    <!---AGREGAR NOTA-->
+    <string name="Uid_Usuario"> Uid del usuario</string>
+    <string name="Correo_usuario">Correo de usuario</string>
+    <string name="Fecha_hora_actual_TXT">Fecha de registro</string>
+    <string name="Fecha_hora_actual">Fecha y hora actual</string>
+    <string name="Titulo"> Título </string>
+    <string name="Descripcion"> Descripcion</string>
+    <string name="Btn_Calendario">Calendario</string>
+    <string name="Fecha"> 00/00/0000 </string>
+    <string name="Estado"> No finalizado</string>
+
+    <!--MENÚ-->
+    <string name="Agregar_Nota_BD">Agregar</string>
+    <string name="Actualizar_Nota_BD">Actualizar</string>
+    <string name="Vaciar_Todas_Las_Notas">Vaciar todas las notas</string>
+    <string name="Perfil_usuario">Perfil del usuario</string>
+    <string name="Actualizar_pass">Actualizar pass</string>
+    <string name="Agregar_contacto">Agregar contacto</string>
+    <string name="Vaciar_contactos">Eliminar todos los contactos</string>
+    <string name="Buscar_contactos">Buscar contactos</string>
+
+    <!--ITEM NOTA-->
+    <string name="Id_nota_Item">Id nota</string>
+    <string name="Uid_Usuario_Item"> Uid del usuario</string>
+    <string name="Correo_usuario_Item">Correo de usuario</string>
+    <string name="Fecha_hora_registro_Item">Fecha y hora registro</string>
+    <string name="Titulo_Item"> Título </string>
+    <string name="Descripcion_Item"> Descripcion</string>
+    <string name="Fecha_Item"> 00/00/0000 </string>
+    <string name="Estado_Item"> No finalizado</string>
+
+    <!--ITEM NOTA IMPORTANTE-->
+    <string name="Id_nota_Item_I">Id nota</string>
+    <string name="Uid_Usuario_Item_I"> Uid del usuario</string>
+    <string name="Correo_usuario_Item_I">Correo de usuario</string>
+    <string name="Fecha_hora_registro_Item_I">Fecha y hora registro</string>
+    <string name="Titulo_Item_I"> Título </string>
+    <string name="Descripcion_Item_I"> Descripcion</string>
+    <string name="Fecha_Item_I"> 00/00/0000 </string>
+    <string name="Estado_Item_I"> No finalizado</string>
+
+    <!--ITEM CONTACTO-->
+    <string name="Id_c_Item"> Id contacto</string>
+    <string name="Uid_c_Item"> Uid usuario</string>
+    <string name="nombres_c_Item">Nombres</string>
+    <string name="apellidos_c_Item">Apellidos</string>
+    <string name="correo_c_Item">Correo</string>
+    <string name="telefono_c_Item">Teléfono</string>
+    <string name="edad_c_Item">Edad</string>
+    <string name="direccion_c_Item">Dirección</string>
+
+    <!--CUADRO DE DIALOGO OPCIONES-->
+    <string name="ElijaOpcionTXT">Elija una opción</string>
+    <string name="CD_Eliminar">Eliminar</string>
+    <string name="CD_Actualizar">Actualizar</string>
+
+    <!--CUADRO DE DIÁLOGO - CUENTA VERIFICADA-->
+    <string name="CuentaVerificadaTXT">Cuenta verificada</string>
+    <string name="EntendidoVerificado">Entendido</string>
+
+    <!--CUADRO DE DIÁLOGO - ELIMINAR NOTA IMPORTANTE-->
+    <string name="EliminarNotaImportanteTXT">¿Desea eliminar ésta nota importante de la lista?</string>
+    <string name="EliminarNota">Eliminar</string>
+    <string name="EliminarNotaCancelar">Cancelar</string>
+
+    <!--CUADRO DE DIÁLOGO - ESTABLECER TELÉFONO-->
+    <string name="Establecer_Telefono">Escriba su teléfono</string>
+    <string name="Btn_Aceptar_Telefono">Aceptar</string>
+
+    <!--CUADRO DE DIÁLOGO - ELEGIR IMAGEN DE-->
+    <string name="ElegirImagenTXT">Elegir imagen de:</string>
+    <string name="Btn_Elegir_Galeria">Galería</string>
+    <string name="Btn_Elegir_Camara">Cámara</string>
+
+    <!--CUADRO DE DIÁLOGO - VALIDAR REGISTRO DE CONTACTO-->
+    <string name="ValidarTXT">Por favor complete al menos el campo nombre del contacto</string>
+    <string name="Btn_Validar_Registro_C">Entendido</string>
+
+    <!--CUADRO DE DIÁLOGO - OPCIONES PARA EL CONTACTO-->
+    <string name="ElegirOpcionContactoTXT">Seleccione una opción para el contacto</string>
+    <string name="Btn_Eliminar_C">Eliminar</string>
+    <string name="Btn_Actualizar_C">Actualizar</string>
+
+    <!--ACTUALIZAR NOTA-->
+    <string name="Id_nota_A">Id nota</string>
+    <string name="Uid_Usuario_A"> Uid del usuario</string>
+    <string name="Correo_usuario_A">Correo de usuario</string>
+    <string name="Fecha_registro_A">Fecha de registro</string>
+    <string name="Titulo_A"> Título </string>
+    <string name="Descripcion_A"> Descripcion</string>
+    <string name="Btn_Calendario_A">Calendario</string>
+    <string name="Fecha_A"> 00/00/0000 </string>
+    <string name="Estado_A"> No finalizado</string>
+    <string name="Estado_nuevo"> -- </string>
+
+    <!---SPINNER - ESTADO-->
+    <string-array name="Estados_nota">
+        <item>"No finalizado"</item>
+        <item>"Finalizado"</item>
+    </string-array>
+
+    <!--DETALLE NOTA-->
+    <string name="Id_nota_Detalle_TXT">Id de la nota: </string>
+    <string name="Id_nota_Detalle">Id nota</string>
+    <string name="Uid_usuario_Detalle_TXT">Uid de usuario: </string>
+    <string name="Uid_usuario_Detalle">Uid usuario</string>
+    <string name="Correo_usuario_Detalle_TXT">Correo de usuario: </string>
+    <string name="Correo_usuario_Detalle">Correo usuario</string>
+    <string name="Titulo_Detalle_TXT">Título: </string>
+    <string name="Titulo_Detalle">Título</string>
+    <string name="Descripcion_Detalle_TXT">Descripción: </string>
+    <string name="Descripcion_Detalle">Descripcion</string>
+    <string name="Fecha_registro_Detalle_TXT">Fecha de registro: </string>
+    <string name="Fecha_Registro_Detalle">Fecha registro</string>
+    <string name="Fecha_Nota_Detalle_TXT">Fecha nota: </string>
+    <string name="Fecha_Nota_Detalle">Fecha nota</string>
+    <string name="Estado_Detalle_TXT">Estado de la nota: </string>
+    <string name="Estado_Detalle">Estado</string>
+    <string name="Boton_Importante">Importante</string>
+
+    <!--Perfil del usuario-->
+    <string name="Uid_Perfil">Uid</string>
+    <string name="Nombres_Perfil">Mis nombres</string>
+    <string name="Apellidos_Perfil">Mis apellidos</string>
+    <string name="Correo_Perfil">Correo</string>
+    <string name="Edad_Perfil">Edad</string>
+    <string name="Telefono_Perfil">Teléfono</string>
+    <string name="Domicilio_Perfil">Domicilio</string>
+    <string name="Universidad_Perfil">Universidad</string>
+    <string name="Profesion_Perfil">Profesión</string>
+    <string name="Fecha_Nacimiento_Perfil">Fecha de nac.</string>
+    <string name="Guardar_Datos">Guardar datos</string>
+
+    <!--Perfil del usuario [Imagen de perfil]-->
+    <string name="BtnElegirImagenDe">Elegir imagen de</string>
+    <string name="BtnActualizarImagen">Actualizar imagen</string>
+
+    <!--Cambiar Password-->
+    <string name="ActualPassTXT">Contraseña actual: </string>
+    <string name="ActualPass"> -- </string>
+    <string name="EtActualPass">Contraseña actual</string>
+    <string name="EtNuevoPass">Nueva contraseña</string>
+    <string name="EtRNuevoPass">Repetir nueva contraseña</string>
+    <string name="BtnActualizarPass">Actualizar</string>
+
+    <!--AGREGAR CONTACTO-->
+    <string name="Uid_Usuario_C">Mi uid</string>
+    <string name="Nombres_C">Nombres contacto</string>
+    <string name="Apellidos_C">Apellidos contacto</string>
+    <string name="Correo_C">Correo electrónico</string>
+    <string name="Telefono_C">Teléfono</string>
+    <string name="Edad_C">Edad</string>
+    <string name="Direccion_C">Dirección</string>
+    <string name="Btn_Guardar_Contacto">Guardar contacto</string>
+
+    <!--DETALLE CONTACTO-->
+    <string name="DetalleContactoTXT">Detalle del contacto</string>
+    <string name="Id_C_D"> -- </string>
+    <string name="Uid_Usuario_D"> -- </string>
+    <string name="Nombre_C_D"> -- </string>
+    <string name="Apellidos_C_D"> -- </string>
+    <string name="Correo_C_D"> -- </string>
+    <string name="Telefono_C_D"> -- </string>
+    <string name="Edad_C_D"> -- </string>
+    <string name="Direccion_C_D"> -- </string>
+    <string name="Llamar_C">Llamar</string>
+    <string name="Mensaje_C">Mensaje</string>
+
+
+    <!--ACTUALIZAR CONTACTO-->
+    <string name="Id_C_A"> -- </string>
+    <string name="Uid_C_A"> -- </string>
+    <string name="Nombres_C_A"> -- </string>
+    <string name="Apellidos_C_A"> -- </string>
+    <string name="Correo_C_A"> -- </string>
+    <string name="Telefono_C_A"> -- </string>
+    <string name="Edad_C_A"> -- </string>
+    <string name="Direccion_C_A"> -- </string>
+    <string name="Btn_Actualizar_C_A">Actualizar</string>
+
+    <!--INFORMACIÓN DE APLICACIÓN-->
+    <string name="Desarrollador">Desarrollado por: Marco Barón Effio</string>
+    <string name="CorreoSoporte">Soporte: marco@gmail.com</string>
+    <string name="Version">Versión: 1.0</string>
+    <string name="EntendidoInfo">Entendido</string>
+</resources>
