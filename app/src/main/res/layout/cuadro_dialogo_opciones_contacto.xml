@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:padding="10dp">
+
+    <TextView
+        android:text="@string/ElegirOpcionContactoTXT"
+        android:textSize="20sp"
+        android:fontFamily="@font/worksans"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="seleccionar.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+    <Button
+        android:id="@+id/Btn_Eliminar_C"
+        android:text="@string/Btn_Eliminar_C"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/worksans"
+        app:icon="@drawable/ic_eliminar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/Btn_Actualizar_C"
+        android:text="@string/Btn_Actualizar_C"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/worksans"
+        app:icon="@drawable/ic_actualizar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

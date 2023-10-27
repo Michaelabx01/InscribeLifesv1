@@ -174,11 +174,11 @@ public class Perfil_Usuario extends AppCompatActivity {
     private void Cargar_Imagen(String imagen_perfil) {
         try {
             /*Cuando la imagen ha sido traida exitosamente desde Firebase*/
-            Glide.with(getApplicationContext()).load(imagen_perfil).placeholder(R.drawable.user_lion).into(Imagen_Perfil);
+            Glide.with(getApplicationContext()).load(imagen_perfil).placeholder(R.drawable.imagen_perfil_usuario).into(Imagen_Perfil);
 
         }catch (Exception e){
             /*Si la imagen no fue traida con éxito*/
-            Glide.with(getApplicationContext()).load(R.drawable.user_lion).into(Imagen_Perfil);
+            Glide.with(getApplicationContext()).load(R.drawable.imagen_perfil_usuario).into(Imagen_Perfil);
 
         }
     }

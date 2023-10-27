@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:text="@string/ValidarTXT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/worksans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:lottie_imageAssetsFolder="assets"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:lottie_fileName="validar_registro_contacto.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+    <Button
+        android:id="@+id/Btn_Validar_Registro_C"
+        android:text="@string/Btn_Validar_Registro_C"
+        android:layout_gravity="center"
+        android:fontFamily="@font/worksans"
+        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

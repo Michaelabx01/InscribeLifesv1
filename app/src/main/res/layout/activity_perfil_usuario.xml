@@ -155,7 +155,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/ic_llamada"/>
+                    android:src="@drawable/llamada_telefonica"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

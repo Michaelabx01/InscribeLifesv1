@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contactos.Agregar_Contacto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--Uid del usuario que realizará el registro de contactos-->
+        <TextView
+            android:id="@+id/Uid_Usuario_C"
+            android:text="@string/Uid_Usuario_C"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:fontFamily="@font/worksans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Icono-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/agregar_contacto_bd"/>
+
+        <!--Nombres del contacto-->
+        <EditText
+            android:id="@+id/Nombres_C"
+            android:hint="@string/Nombres_C"
+            android:layout_marginTop="10dp"
+            android:inputType="textCapWords|textPersonName"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Apellidos del contacto-->
+        <EditText
+            android:id="@+id/Apellidos_C"
+            android:hint="@string/Apellidos_C"
+            android:inputType="textCapWords|textPersonName"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Correo del contacto-->
+        <EditText
+            android:id="@+id/Correo_C"
+            android:hint="@string/Correo_C"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Teléfono del contactos-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Teléfono del contactos-->
+            <TextView
+                android:id="@+id/Telefono_C"
+                android:hint="@string/Telefono_C"
+                android:fontFamily="@font/worksans"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
+            <!--Código del país-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Editar_Telefono_C"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_llamada"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Edad del contacto-->
+        <EditText
+            android:id="@+id/Edad_C"
+            android:hint="@string/Edad_C"
+            android:inputType="number"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Dirección del contacto-->
+        <EditText
+            android:id="@+id/Direccion_C"
+            android:hint="@string/Direccion_C"
+            android:inputType="textCapWords|text"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Botón para registrar contacto-->
+        <Button
+            android:id="@+id/Btn_Guardar_Contacto"
+            android:text="@string/Btn_Guardar_Contacto"
+            android:fontFamily="@font/worksans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
