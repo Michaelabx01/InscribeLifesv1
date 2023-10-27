@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".AgregarNota.Agregar_Nota">
 
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +18,7 @@
             android:id="@+id/Uid_Usuario"
             android:hint="@string/Uid_Usuario"
             android:textSize="18sp"
+            android:visibility="gone"
             android:fontFamily="@font/worksans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -28,15 +28,41 @@
             android:id="@+id/Correo_usuario"
             android:hint="@string/Correo_usuario"
             android:textSize="18sp"
+            android:visibility="gone"
             android:fontFamily="@font/worksans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <!--ICONO - TEXTVIEW-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Icono-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_fecha"/>
+
+            <TextView
+                android:text="@string/Fecha_hora_actual_TXT"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/worksans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <!--FECHA Y HORA ACTUAL DEL DISPOSITIVO-->
         <TextView
             android:id="@+id/Fecha_hora_actual"
             android:hint="@string/Fecha_hora_actual"
             android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/worksans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -97,8 +123,6 @@
             android:fontFamily="@font/worksans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

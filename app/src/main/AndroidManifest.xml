@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +23,22 @@
         android:theme="@style/Theme.InscribeLifes"
         tools:targetApi="31">
         <activity
+            android:name=".ActualizarPass.ActulizarPassUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil.Editar_imagen_perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Detalle.Detalle_Nota"
+            android:exported="false" />
+        <activity
             android:name=".ActulizarNota.Actualizar_Nota"
             android:exported="false" />
         <activity
             android:name=".Perfil.Perfil_Usuario"
             android:exported="false" />
         <activity
-            android:name=".NotasArchivadas.Notas_Archivadas"
+            android:name=".NotasImportantes.Notas_Importantes"
             android:exported="false" />
         <activity
             android:name=".ListarNotas.Listar_Notas"

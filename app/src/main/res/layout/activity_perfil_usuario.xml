@@ -1,9 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Perfil.Perfil_Usuario">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Portada - Imagen de perfil-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--Portada-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_fondo"/>
+
+            <!--Imagen de perfil-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Imagen_Perfil"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="#354f60"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_lion"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Editar_imagen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/editar_imagenv1"/>
+
+        </RelativeLayout>
+
+        <!--Datos del usuario-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--Correo-->
+            <TextView
+                android:id="@+id/Correo_Perfil"
+                android:text="@string/Correo_Perfil"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/worksans"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Uid-->
+            <TextView
+                android:id="@+id/Uid_Perfil"
+                android:text="@string/Uid_Perfil"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableStart="@drawable/nombre_menu"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/worksans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Nombres-->
+            <EditText
+                android:id="@+id/Nombres_Perfil"
+                android:hint="@string/Nombres_Perfil"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Apellidos-->
+            <EditText
+                android:id="@+id/Apellidos_Perfil"
+                android:hint="@string/Apellidos_Perfil"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Edad-->
+            <EditText
+                android:id="@+id/Edad_Perfil"
+                android:hint="@string/Edad_Perfil"
+                android:inputType="number"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <!--Domiciio-->
+            <EditText
+                android:id="@+id/Domicilio_Perfil"
+                android:hint="@string/Domicilio_Perfil"
+                android:inputType="text"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Universidad-->
+            <EditText
+                android:id="@+id/Universidad_Perfil"
+                android:hint="@string/Universidad_Perfil"
+                android:inputType="text"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Profesión-->
+            <EditText
+                android:id="@+id/Profesion_Perfil"
+                android:hint="@string/Profesion_Perfil"
+                android:inputType="text"
+                android:fontFamily="@font/worksans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <!--Teléfono-->
+                <TextView
+                    android:id="@+id/Telefono_Perfil"
+                    android:hint="@string/Telefono_Perfil"
+                    android:fontFamily="@font/worksans"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/Editar_Telefono"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_llamada"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/Fecha_Nacimiento_Perfil"
+                    android:text="@string/Fecha_Nacimiento_Perfil"
+                    android:fontFamily="@font/worksans"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/Editar_fecha"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_calendario"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <!--Guardar datos-->
+            <Button
+                android:id="@+id/Guardar_Datos"
+                android:text="@string/Guardar_Datos"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

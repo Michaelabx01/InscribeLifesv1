@@ -1,9 +1,5 @@
 package com.valdiviezomazautp.inscribelifes;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -27,28 +26,29 @@ import java.util.HashMap;
 
 public class Registro extends AppCompatActivity {
 
-    EditText NombreEt, CorreoEt, ContraseñaEt, ConfirmarContraseñaEt;
+    EditText NombreEt,CorreoEt,ContaseñaEt,ConfirmarContraseñaEt;
     Button RegistrarUsuario;
     TextView TengounacuentaTXT;
 
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
 
-    String nombre = " ", correo = " ", password = " ", confirmarpassword = " ";
+    //
+    String nombre = " " , correo = " ", password = "" , confirmarpassword = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        //ActionBar actionBar = getActionBar();
-        //actionBar.setTitle("Registrar");
-        //actionBar.setDisplayHomeAsUpEnabled(true);
-        //actionBar.setDisplayShowHomeEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Registrar");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
 
         NombreEt = findViewById(R.id.NombreEt);
         CorreoEt = findViewById(R.id.CorreoEt);
-        ContraseñaEt = findViewById(R.id.ContraseñaEt);
+        ContaseñaEt = findViewById(R.id.ContraseñaEt);
         ConfirmarContraseñaEt = findViewById(R.id.ConfirmarContraseñaEt);
         RegistrarUsuario = findViewById(R.id.RegistrarUsuario);
         TengounacuentaTXT = findViewById(R.id.TengounacuentaTXT);
@@ -56,7 +56,7 @@ public class Registro extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(Registro.this);
-        progressDialog.setTitle("Por favor espere");
+        progressDialog.setTitle("Espere por favor");
         progressDialog.setCanceledOnTouchOutside(false);
 
         RegistrarUsuario.setOnClickListener(new View.OnClickListener() {
@@ -70,90 +70,103 @@ public class Registro extends AppCompatActivity {
         TengounacuentaTXT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //
                 startActivity(new Intent(Registro.this, Login.class));
             }
         });
-
     }
 
-    private void ValidarDatos() {
+    private void ValidarDatos(){
         nombre = NombreEt.getText().toString();
         correo = CorreoEt.getText().toString();
-        password = ContraseñaEt.getText().toString();
+        password = ContaseñaEt.getText().toString();
         confirmarpassword = ConfirmarContraseñaEt.getText().toString();
 
-        if (TextUtils.isEmpty(nombre)) {
-            Toast.makeText(this, "Por favor ingrese su nombre", Toast.LENGTH_SHORT).show();
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
-            Toast.makeText(this, "Ingrese correo", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Por favor ingrese su contraseña", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(confirmarpassword)) {
-            Toast.makeText(this, "Por favor confirme su contraseña", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(nombre)){
+            Toast.makeText(this, "Ingrese nombre", Toast.LENGTH_SHORT).show();
         }
-        else if (!password.equals(confirmarpassword)) {
+        else if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
+            Toast.makeText(this, "Ingrese correo", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(password)){
+            Toast.makeText(this, "Ingrese contraseña", Toast.LENGTH_SHORT).show();
+
+        }
+        else if (TextUtils.isEmpty(confirmarpassword)){
+            Toast.makeText(this, "Confirme contraseña", Toast.LENGTH_SHORT).show();
+
+        }
+        else if (!password.equals(confirmarpassword)){
             Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
         }
         else {
             CrearCuenta();
         }
-
     }
 
     private void CrearCuenta() {
-        progressDialog.setMessage("Creando cuenta...");
+        progressDialog.setMessage("Creando su cuenta...");
         progressDialog.show();
 
+        //Crear un usuario en Firebase
         firebaseAuth.createUserWithEmailAndPassword(correo, password)
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                      GuardarInformacion();
-
+                        //
+                        GuardarInformacion();
                     }
-
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         progressDialog.dismiss();
-                        Toast.makeText(Registro.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Registro.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
 
     }
 
     private void GuardarInformacion() {
-        progressDialog.setMessage("Guardando información...");
+        progressDialog.setMessage("Guardando su información");
         progressDialog.dismiss();
 
+        //Obtener la identificación de usuario actual
         String uid = firebaseAuth.getUid();
 
         HashMap<String, String> Datos = new HashMap<>();
-        Datos.put("uid", uid);
+        /*DATOS DEL USUARIO*/
+        Datos.put("uid",  uid);
         Datos.put("correo", correo);
         Datos.put("nombres", nombre);
         Datos.put("password", password);
+
+        Datos.put("apellidos", "");
+        Datos.put("edad","");
+        Datos.put("telefono","");
+        Datos.put("domicilio","");
+        Datos.put("universidad","");
+        Datos.put("profesion","");
+        Datos.put("fecha_de_nacimiento", "");
+        Datos.put("imagen_perfil","");
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios");
         databaseReference.child(uid)
                 .setValue(Datos)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                     progressDialog.dismiss();
-                     Toast.makeText(Registro.this, "Cuenta creada exitosamente", Toast.LENGTH_SHORT).show();
-                     startActivity(new Intent(Registro.this, MenuPrincipal.class));
+                    public void onSuccess(Void unused) {
+                        progressDialog.dismiss();
+                        Toast.makeText(Registro.this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(Registro.this, MenuPrincipal.class));
                         finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
-                       public void onFailure(@NonNull Exception e) {
-                            progressDialog.dismiss();
-                            Toast.makeText(Registro.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
+                    public void onFailure(@NonNull  Exception e) {
+                        progressDialog.dismiss();
+                        Toast.makeText(Registro.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 });
+
     }
 
     @Override

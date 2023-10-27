@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +16,8 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            app:cardBackgroundColor="@color/teal_700"
+            android:layout_height="160dp"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:cardUseCompatPadding="true"
             android:padding="0.2dp"
             app:cardCornerRadius="5dp">
@@ -24,58 +25,139 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-                <TextView
-                    android:text="@string/BienvenidoPrincipal"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/worksans"
-                    android:textSize="20sp"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/user_lion"/>
+
+                <!--DATOS-->
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <ProgressBar
-                    android:id="@+id/progressBarDatos"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
+                    android:padding="10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                <!--NOMBRES-->
-                <TextView
-                    android:id="@+id/UidPrincipal"
-                    android:text="@string/UidPrincipal"
-                    android:visibility="gone"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/worksans"
-                    android:textSize="15sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@string/BienvenidoPrincipal"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/worksans"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
-                <!--NOMBRES-->
-                <TextView
-                    android:id="@+id/NombresPrincipal"
-                    android:text="@string/NombresPrincipal"
-                    android:visibility="gone"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/worksans"
-                    android:textSize="20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    <ProgressBar
+                        android:id="@+id/progressBarDatos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"/>
 
-                <!---CORREO-->
-                <TextView
-                    android:id="@+id/CorreoPrincipal"
-                    android:text="@string/CorreoPrincipal"
-                    android:visibility="gone"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/worksans"
-                    android:textSize="20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    <!--UID-->
+                    <TextView
+                        android:id="@+id/UidPrincipal"
+                        android:text="@string/UidPrincipal"
+                        android:visibility="gone"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/worksans"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <!--NOMBRES-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/Linear_Nombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!--ICONO-->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nombre_menu"/>
+
+                        <!--NOMBRES-->
+                        <TextView
+                            android:id="@+id/NombresPrincipal"
+                            android:text="@string/NombresPrincipal"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/worksans"
+                            android:textSize="17sp"
+                            android:layout_marginStart="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
 
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--CORREO-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/Linear_Correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!--ICONO-->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_correo_menu"/>
+
+                        <!---CORREO-->
+                        <TextView
+                            android:id="@+id/CorreoPrincipal"
+                            android:text="@string/CorreoPrincipal"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/worksans"
+                            android:textSize="17sp"
+                            android:layout_marginStart="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--VERIFICACIÓN-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/Linear_Verficacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!--ICONO-->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_verificacion"/>
+
+                        <!---ESTADO-->
+                        <Button
+                            android:id="@+id/EstadoCuentaPrincipal"
+                            android:text="@string/EstadoCuentaPrincipal"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/worksans"
+                            android:textSize="17sp"
+                            android:backgroundTint="#607d8b"
+                            android:layout_marginStart="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -172,8 +254,8 @@
                         android:src="@drawable/archivados"/>
 
                     <Button
-                        android:id="@+id/Archivados"
-                        android:text="Archivos"
+                        android:id="@+id/Importantes"
+                        android:text="@string/Importantes"
                         android:enabled="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -198,8 +280,8 @@
                         android:src="@drawable/perfil"/>
 
                     <Button
-                        android:id="@+id/Perfil"
-                        android:text="Perfil"
+                        android:id="@+id/Contactos"
+                        android:text="@string/Contactos"
                         android:enabled="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

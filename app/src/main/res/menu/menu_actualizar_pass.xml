@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/Actualizar_pass"
+        android:title="@string/Actualizar_pass"
+        android:icon="@drawable/candado"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+</menu>
