@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -43,6 +45,8 @@ public class MenuPrincipal extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
 
+    ImageView Imagen_usuario;
+
     TextView UidPrincipal, NombresPrincipal, CorreoPrincipal;
     Button EstadoCuentaPrincipal;
     ProgressBar progressBarDatos;
@@ -60,6 +64,7 @@ public class MenuPrincipal extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("");
 
+        Imagen_usuario = findViewById(R.id.Imagen_usuario);
         UidPrincipal = findViewById(R.id.UidPrincipal);
         NombresPrincipal = findViewById(R.id.NombresPrincipal);
         CorreoPrincipal = findViewById(R.id.CorreoPrincipal);
@@ -297,6 +302,7 @@ public class MenuPrincipal extends AppCompatActivity {
                     String uid = ""+snapshot.child("uid").getValue();
                     String nombres = ""+snapshot.child("nombres").getValue();
                     String correo = ""+snapshot.child("correo").getValue();
+                    String imagen = ""+snapshot.child("imagen_perfil").getValue();
 
                     //Setear los datos en los respectivos TextView
                     UidPrincipal.setText(uid);
@@ -310,6 +316,7 @@ public class MenuPrincipal extends AppCompatActivity {
                     Contactos.setEnabled(true);
                     AcercaDe.setEnabled(true);
                     CerrarSesion.setEnabled(true);
+                    ObtenerImagen(imagen);
 
                 }
             }
@@ -319,6 +326,15 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void ObtenerImagen(String imagen) {
+        try {
+            Glide.with(this).load(imagen).placeholder(R.drawable.user_lion).into(Imagen_usuario);
+        }catch (Exception e){
+            Glide.with(this).load(R.drawable.user_lion).into(Imagen_usuario);
+
+        }
     }
 
     @Override

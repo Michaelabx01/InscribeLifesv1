@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contactos.Actualizar_Contacto">
+    tools:context=".Contactos.Actualizar_contacto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/portada_contacto" />
+                android:src="@drawable/ic_fondov3" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/Imagen_C_A"
