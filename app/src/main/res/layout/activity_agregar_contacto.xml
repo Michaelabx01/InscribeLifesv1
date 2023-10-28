@@ -23,12 +23,15 @@
             android:layout_height="wrap_content"/>
 
         <!--Icono-->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_fileName="add_contacto.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/agregar_contacto_bd"/>
+            android:layout_marginTop="10dp"/>
 
         <!--Nombres del contacto-->
         <EditText
@@ -80,7 +83,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_llamada"/>
+                android:src="@drawable/llamada_telefonica"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

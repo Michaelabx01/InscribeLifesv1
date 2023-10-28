@@ -1,5 +1,13 @@
 package com.valdiviezomazautp.inscribelifes.Contactos;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,14 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -116,7 +116,7 @@ public class Listar_Contactos extends AppCompatActivity {
                         String imagen_c = getItem(position).getImagen();
 
                         //Enviar los datos a la siguiente actividad
-                        Intent intent = new Intent(Listar_Contactos.this, Detalle_contacto.class);
+                        Intent intent = new Intent(Listar_Contactos.this, Detalle_Contacto.class);
                         intent.putExtra("id_c", id_c);
                         intent.putExtra("uid_usuario", uid_usuario);
                         intent.putExtra("nombres_c", nombres_c);
@@ -161,7 +161,7 @@ public class Listar_Contactos extends AppCompatActivity {
                         Btn_Actualizar_C.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(Listar_Contactos.this, Actualizar_Contacto.class);
+                                Intent intent = new Intent(Listar_Contactos.this, Actualizar_contacto.class);
                                 intent.putExtra("id_c", id_c);
                                 intent.putExtra("uid_usuario", uid_usuario);
                                 intent.putExtra("nombres_c", nombres_c);
@@ -230,7 +230,7 @@ public class Listar_Contactos extends AppCompatActivity {
                         String imagen_c = getItem(position).getImagen();
 
                         //Enviar los datos a la siguiente actividad
-                        Intent intent = new Intent(Listar_Contactos.this, Detalle_contacto.class);
+                        Intent intent = new Intent(Listar_Contactos.this, Detalle_Contacto.class);
                         intent.putExtra("id_c", id_c);
                         intent.putExtra("uid_usuario", uid_usuario);
                         intent.putExtra("nombres_c", nombres_c);
@@ -275,7 +275,7 @@ public class Listar_Contactos extends AppCompatActivity {
                         Btn_Actualizar_C.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(Listar_Contactos.this, Actualizar_Contacto.class);
+                                Intent intent = new Intent(Listar_Contactos.this, Actualizar_contacto.class);
                                 intent.putExtra("id_c", id_c);
                                 intent.putExtra("uid_usuario", uid_usuario);
                                 intent.putExtra("nombres_c", nombres_c);

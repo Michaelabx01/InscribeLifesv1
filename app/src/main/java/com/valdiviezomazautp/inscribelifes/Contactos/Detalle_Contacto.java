@@ -1,5 +1,11 @@
 package com.valdiviezomazautp.inscribelifes.Contactos;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,16 +17,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import com.bumptech.glide.Glide;
 import com.valdiviezomazautp.inscribelifes.R;
 
-public class Detalle_contacto extends AppCompatActivity {
+public class Detalle_Contacto extends AppCompatActivity {
 
     ImageView Imagen_C_D;
     TextView Id_C_D, Uid_Usuario_D, Nombre_C_D, Apellidos_C_D, Correo_C_D, Edad_C_D, Telefono_C_D, Direccion_C_D;
@@ -48,7 +48,7 @@ public class Detalle_contacto extends AppCompatActivity {
         Llamar_C.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(Detalle_contacto.this,
+                if (ContextCompat.checkSelfPermission(Detalle_Contacto.this,
                         Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
                     LlamarContacto();
                 }else {
@@ -60,7 +60,7 @@ public class Detalle_contacto extends AppCompatActivity {
         Mensaje_C.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(Detalle_contacto.this,
+                if (ContextCompat.checkSelfPermission(Detalle_Contacto.this,
                         Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
                     EnviarMensaje();
                 }else {

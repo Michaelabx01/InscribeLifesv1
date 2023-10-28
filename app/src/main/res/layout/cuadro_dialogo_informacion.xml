@@ -12,7 +12,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         app:lottie_imageAssetsFolder="assets"
-        app:lottie_fileName="informacion.json"
+        app:lottie_fileName="naruto.json"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"/>
 

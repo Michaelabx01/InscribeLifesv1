@@ -1,5 +1,14 @@
 package com.valdiviezomazautp.inscribelifes.Contactos;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
@@ -14,15 +23,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -44,7 +44,7 @@ import com.valdiviezomazautp.inscribelifes.R;
 
 import java.util.HashMap;
 
-public class Actualizar_Contacto extends AppCompatActivity {
+public class Actualizar_contacto extends AppCompatActivity {
 
     TextView Id_C_A, Uid_C_A, Telefono_C_A;
     EditText Nombres_C_A, Apellidos_C_A, Correo_C_A, Edad_C_A, Direccion_C_A;
@@ -95,7 +95,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
         Actualizar_imagen_C_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(Actualizar_Contacto.this,
+                if (ContextCompat.checkSelfPermission(Actualizar_contacto.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
                     SeleccionarImagenGaleria();
                 }
@@ -105,7 +105,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
             }
         });
 
-        progressDialog = new ProgressDialog(Actualizar_Contacto.this);
+        progressDialog = new ProgressDialog(Actualizar_contacto.this);
         progressDialog.setTitle("Espere por favor");
         progressDialog.setCanceledOnTouchOutside(false);
     }
@@ -124,7 +124,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
         Actualizar_Telefono_C_A = findViewById(R.id.Actualizar_Telefono_C_A);
         Btn_Actualizar_C_A = findViewById(R.id.Btn_Actualizar_C_A);
 
-        dialog_establecer_telefono = new Dialog(Actualizar_Contacto.this);
+        dialog_establecer_telefono = new Dialog(Actualizar_contacto.this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
@@ -189,7 +189,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
                     Telefono_C_A.setText(codigo_pais_telefono);
                     dialog_establecer_telefono.dismiss();
                 }else {
-                    Toast.makeText(Actualizar_Contacto.this, "Ingrese un número telefónico", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Actualizar_contacto.this, "Ingrese un número telefónico", Toast.LENGTH_SHORT).show();
                     dialog_establecer_telefono.dismiss();
                 }
             }
@@ -223,7 +223,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
                     ds.getRef().child("direccion").setValue(DireccionActualizar);
                 }
 
-                Toast.makeText(Actualizar_Contacto.this, "Información actualizada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Actualizar_contacto.this, "Información actualizada", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -251,11 +251,11 @@ public class Actualizar_Contacto extends AppCompatActivity {
                         ActualizarImagenBD(UriIMAGEN);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Actualizar_Contacto.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Actualizar_contacto.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void ActualizarImagenBD(String uriIMAGEN) {
@@ -276,16 +276,16 @@ public class Actualizar_Contacto extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void unused) {
                         progressDialog.dismiss();
-                        Toast.makeText(Actualizar_Contacto.this, "Imagen actualizada con éxito", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Actualizar_contacto.this, "Imagen actualizada con éxito", Toast.LENGTH_SHORT).show();
                         onBackPressed();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                progressDialog.dismiss();
-                Toast.makeText(Actualizar_Contacto.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progressDialog.dismiss();
+                        Toast.makeText(Actualizar_contacto.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
     }
@@ -307,7 +307,7 @@ public class Actualizar_Contacto extends AppCompatActivity {
                         Imagen_C_A.setImageURI(imagenUri);
                         subirImagenStorage();
                     }else {
-                        Toast.makeText(Actualizar_Contacto.this, "Cancelado por el usuario", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Actualizar_contacto.this, "Cancelado por el usuario", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

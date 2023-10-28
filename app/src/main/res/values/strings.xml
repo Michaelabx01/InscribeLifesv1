@@ -217,8 +217,8 @@
     <string name="Btn_Actualizar_C_A">Actualizar</string>
 
     <!--INFORMACIÓN DE APLICACIÓN-->
-    <string name="Desarrollador">Desarrollado por: Marco Barón Effio</string>
-    <string name="CorreoSoporte">Soporte: marco@gmail.com</string>
+    <string name="Desarrollador">Desarrollado por: Michael Anthony Valdiviezo Maza</string>
+    <string name="CorreoSoporte">Soporte: michaelino02@gmail.com</string>
     <string name="Version">Versión: 1.0</string>
     <string name="EntendidoInfo">Entendido</string>
 </resources>
