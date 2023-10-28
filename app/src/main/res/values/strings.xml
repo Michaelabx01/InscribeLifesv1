@@ -56,6 +56,7 @@
     <string name="Agregar_contacto">Agregar contacto</string>
     <string name="Vaciar_contactos">Eliminar todos los contactos</string>
     <string name="Buscar_contactos">Buscar contactos</string>
+    <string name="Calendario">Calendario</string>
 
     <!--ITEM NOTA-->
     <string name="Id_nota_Item">Id nota</string>
@@ -221,4 +222,7 @@
     <string name="CorreoSoporte">Soporte: michaelino02@gmail.com</string>
     <string name="Version">Versión: 1.0</string>
     <string name="EntendidoInfo">Entendido</string>
+
+
+
 </resources>

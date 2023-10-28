@@ -38,6 +38,9 @@ import com.valdiviezomazautp.inscribelifes.ListarNotas.Listar_Notas;
 import com.valdiviezomazautp.inscribelifes.NotasImportantes.Notas_Importantes;
 import com.valdiviezomazautp.inscribelifes.Perfil.Perfil_Usuario;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class MenuPrincipal extends AppCompatActivity {
 
@@ -55,7 +58,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
     DatabaseReference Usuarios;
 
-    Dialog dialog_cuenta_verificada, dialog_informacion;
+    Dialog dialog_cuenta_verificada, dialog_informacion,dialog_fecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         dialog_cuenta_verificada = new Dialog(this);
         dialog_informacion = new Dialog(this);
+        dialog_fecha = new Dialog(this);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Espere por favor ...");
@@ -261,6 +265,34 @@ public class MenuPrincipal extends AppCompatActivity {
         dialog_informacion.setCanceledOnTouchOutside(false);
     }
 
+    private void VizualizarFecha() {
+        TextView Fecha_hoy;
+        Button Btn_cerrar;
+
+        dialog_fecha.setContentView(R.layout.cuadro_dialogo_fecha);
+
+        Fecha_hoy = dialog_fecha.findViewById(R.id.Fecha_hoy);
+
+        Btn_cerrar = dialog_fecha.findViewById(R.id.Btn_cerrar);
+
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("d 'de' MMMM 'del' yyyy");
+        String fecha = simpleDateFormat.format(date);
+        Fecha_hoy.setText(fecha);
+
+        Btn_cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_fecha.dismiss();
+            }
+        });
+
+        dialog_fecha.show();
+        dialog_fecha.setCanceledOnTouchOutside(false);
+
+
+    }
+
     @Override
     protected void onStart() {
         ComprobarInicioSesion();
@@ -348,6 +380,9 @@ public class MenuPrincipal extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.Perfil_usuario){
             startActivity(new Intent(MenuPrincipal.this, Perfil_Usuario.class));
+        }
+        if (item.getItemId() == R.id.Calendario){
+            VizualizarFecha();
         }
         return super.onOptionsItemSelected(item);
     }

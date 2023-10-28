@@ -10,4 +10,12 @@
 
     </item>
 
+    <item
+        android:id="@+id/Calendario"
+        android:title="@string/Perfil_usuario"
+        android:icon="@drawable/ic_calendario"
+        app:showAsAction="ifRoom">
+
+    </item>
+
 </menu>
